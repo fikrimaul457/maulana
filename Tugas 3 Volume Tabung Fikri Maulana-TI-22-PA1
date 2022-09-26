@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  float v, r, t;
+  const float phi = 3.14;
+
+  cout << "Program Menghitung Volume Tabung\n ";
+   cout << "Input Jari-jari = ";
+   cin >> r;
+   cout << "Input Tinggi = ";
+  cin >> t;
+  v = phi * r * r * t ;
+
+  cout << "Volume Tabung Adalah " << v << endl;
+
+  return 0;
+}
