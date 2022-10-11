@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int b;
+  cout <<"Contoh perulangan menurun ";
+  
+  for(b=1; b<=10; b++)
+    cout << "\n" << b;
+  cout << endl;
+
+}
