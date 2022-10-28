@@ -1,0 +1,19 @@
+#include <ctype.h>
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+  char kalimat1[30] = "teknik";
+  char kalimat2[30] = "informatika";
+
+  cout << " kalimat pertama adalah = ";
+  cout << kalimat1;
+  cout << endl;
+  cout << " kalimat kedua adalah = ";
+  cout << kalimat2;
+  cout << endl;
+  strcat(kalimat1, kalimat2);
+  cout << " Hasil Penggabungannya adalah = " << kalimat1;
+  return 0;
+}
