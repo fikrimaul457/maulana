@@ -1,0 +1,75 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int matriks1[10][10], matriks2[10][10], hasil[10][10], ht[10][10],hk[10][10];
+  int a, b, c, d, e, f, g, h, i, jumlah = 0;
+  cout << "Masukkan jumlah baris matriks pertama: ";
+  cin >> e;
+  cout << "Masukkan jumlah kolom matriks pertama: ";
+  cin >> f;
+
+  cout << "Masukkan jumlah baris matriks kedua: ";
+  cin >> h;
+  cout << "Masukkan jumlah kolom matriks kedua: ";
+  cin >> i;
+
+  if(n != h){
+    cout << "Matriks tidak dapat dikalikan satu sama lain.\n";
+  } else {
+
+    cout << "Masukkan elemen matriks pertama: \n";
+    for(a = 0; a < e; a++){
+      for(b = 0; b < f; b++){
+        cout << "Matriks a" << a + 1 << b + 1 << " : ";
+        cin >> matriks1[a][b];
+      }
+    }
+
+    cout << "Masukkan elemen matriks kedua: \n";
+    for(a = 0; a < h; a++){
+      for(b = 0; b < i; b++){
+        cout << "Matriks b" << a + 1 << b + 1 << " : ";
+        cin >> matriks2[a][b];
+      }
+    }
+
+    cout << "Hasil penjumlahan matriks : "<<endl;
+    for(a = 0; a < e; a++){
+    for(b = 0; b < f; b++){
+      hasil[a][b] = matriks1[a][b] + matriks2[a][b];
+      cout << hasil[a][b] << "\t";
+    }
+    cout << endl;
+  }
+
+    cout << "Hasil pengurangan matriks : "<<endl;
+    for(a = 0; a < e; a++){
+    for(b = 0; b < f; b++){
+      hasil[a][b] = matriks1[a][b] - matriks2[a][b];
+      cout << hasil[a][b] << "\t";
+    }
+    cout << endl;
+  }
+
+    for(a = 0; a < e; a++){
+      for(b = 0; b < i; b++){
+        for(c = 0; c < h; c++){
+          jumlah = jumlah + matriks1[a][c] * matriks2[c][b];
+        }
+        hasil[a][b] = jumlah;
+        jumlah = 0;
+      }
+    }
+    cout << "Hasil perkalian matriks: \n";
+    for(a = 0; a < e; a++){
+      for(b = 0; b < i; b++){
+        cout << hasil[a][b] << "\t";
+      }
+      cout << endl;
+    }
+  }
+  
+  return 0;
+}
