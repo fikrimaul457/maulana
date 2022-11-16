@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int harga[10], x, y, r[10], jumlah[10], totalharga, hargaakhir, pajak;
+  char jenis;
+  string tipe[10];
+  cout << "GEROBAK FRIED CHICKEN" << endl;
+  cout << "----------------------" << endl;
+  cout << "Kode\tJenis\tHarga" << endl;
+  cout << "----------------------" << endl;
+  cout << " D\tDada\t Rp.2500" << endl;
+  cout << " P\tPaha\t Rp.2000" << endl;
+  cout << " S\tSayap\t Rp.1500" << endl;
+  cout << "----------------------" << endl;
+  cout << "Banyak Jenis = ";
+  cin >> x;
+
+  for (y = 0; y < x; i++) {
+    cout << "Jenis ke - " << y + 1 << endl;
+  ulang:
+    cout << "Jenis Potong [D/P/S] : ";
+    cin >> jenis;
+    if (jenis == 'D' || jenis == 'd') {
+      r[y] = 2500;
+      tipe[y] = "Dada";
+    } else if (jenis == 'P' || jenis == 'p') {
+      r[y] = 2000;
+      tipe[y] = "Paha";
+    } else if (jenis == 'S' || jenis == 's') {
+      r[y] = 3500;
+      tipe[y] = "Sayap";
+    } else {
+      cout << "Input invalid.\n";
+      goto ulang;
+    }
+    cout << "Banyak Potong : ";
+    cin >> jumlah[y];
+
+    harga[y] = jumlah[y] * r[y];
+  }
+  cout << "\t\t GEROBAK FIRED CHICKEN " << endl;
+  cout << "-----------------------------------------" << endl;
+  cout << "No.\tJenis\t Harga    Banyak    Jumlah" << endl;
+  cout << "\tPotong \tSatuan    Beli      Harga " << endl;
+  cout << "-----------------------------------------" << endl;
+  for (y = 0; y < x; y++) {
+    cout << y + 1 << "   " << tipe[y] << "\t  " << r[y] << "     " << jumlah[y]
+         << "        Rp." << harga[y] << endl;
+    totalharga += harga[y];
+  }
+  pajak = totalharga * 0.1;
+  cout << "-----------------------------------------" << endl;
+  cout << "\n\t\t\tHarga total = " << totalharga - 1;
+  cout << "\n\t\t\tPajak 10%   = " << pajak;
+  cout << "\n\t\t\tTotal Bayar = " << totalharga - 1 - pajak;
+  cout << endl;
+  return 0;
+}
