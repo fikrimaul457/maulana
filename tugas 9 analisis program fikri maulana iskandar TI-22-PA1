@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int hargaSetelahPajak(int hargaDasar) {
+return hargaDasar + (hargaDasar * 10/100);
+}
+
+int main(){
+int hargaMawar = 10000;
+int hargaFinalMawar = hargaSetelahPajak(hargaMawar);
+cout << "Harga mawar 1 tangkai Rp." << hargaFinalMawar << endl;
+return 0;
+}
+
+//            ANALISIS PROGRAM DIATAS                 // 
+//--------------------------------------------------//
+// Di baris ke 5 merupakan deklarasi dari fungsi hargaSetelahPajak, yang bervariabelkan hargaDasar yang bertipe Integer //
+// Di baris ke 6 merupakan proses hargaDasar yang ditambah (hargaDasar dikali 10 dibagi 100) //
+// Di baris ke 9-13 merupakan fungsi utama //
+// Di baris ke 11 hargaMawar adalah 10.000 yang bertipe integer //
+// Di baris ke 12 hargaFinalMawar yang bertipe integer sama dengan hargaSetelahPajak //
+// Di baris ke 13 memerintahkan untuk mencetak harga mawar 1 tangkai //  
+//--------------------------------------------------//
