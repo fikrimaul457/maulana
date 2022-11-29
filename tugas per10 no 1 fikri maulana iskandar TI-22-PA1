@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+long int pangkat (int a, int b);
+int main() {
+  int x,y;
+  cout << "menghitung pangkat dengan fungsi rekursif";
+  cout << "masukkan nilai x = ";
+  cin >> x;
+  cout << "masukkan nilai y = ";
+  cin >> y;
+  cout << endl << x << " dipangkatkan " << y << " = ";
+  cout << pangkat (x,y);
+}
+long int pangkat (int a,int b){
+  if (b==0)
+    return(1);
+  else
+    return (a * pangkat(a,b-1));
+}
