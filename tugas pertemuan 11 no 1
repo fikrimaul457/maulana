@@ -1,0 +1,14 @@
+include <iostream>
+using namespace std;
+int main(){
+  int A[3] = {200,201,200};
+  int *E;
+  E = &A[0];
+  cout << *E << " ";
+  E = E+1;     // menemukan Array ke berapa //
+  cout << *E << " ";
+  E = E-1;    // menemukan Array ke berapa //
+  cout << *E << endl;
+
+  return 0;
+  }
