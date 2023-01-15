@@ -1,0 +1,4 @@
+//Baris 6, mendeklarasikan variabel pointer ke tipe data integer
+//Baris 7, perintah untuk mengalokasikan memori
+//Baris 9, perintah untuk menggunakan memori yang telah dialokasikan
+//Baris 12, perintah untuk mendealokasikan memori
