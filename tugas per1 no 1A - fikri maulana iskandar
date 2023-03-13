@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+// void adalah fungsi //
+void bubbleSort(int arr[], int n){
+  int a, b, temp;
+  for(a=0; a<n; a++){
+    for(b=0; b<n-a-1; b++){
+      if(arr[b] < arr[b+1]){
+        temp = arr[b];
+        arr[b] = arr[b+1];
+        arr[b+1] = temp;
+      }
+    }
+  }
+}
+int main(){
+  int array[100], n, a, b;
+  cout << "Masukan banyak elemen: ";
+  cin >> n;
+  cout << "Masukan nilai : \n";
+  for(a=0; a<n; a++){
+    cin >> array[a];
+  }
+  bubbleSort(array, n);
+  cout << "Hasil pengurutan dengan algoritma bubble : \n";
+  for(a=0; a<n; a++){
+    cout << array[a] << " ";
+  }
+  cout << "\n";
+}
